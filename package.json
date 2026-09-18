@@ -1,0 +1,19 @@
+{
+  "name": "rent-api",
+  "version": "1.0.0",
+  "description": "Backend API for SiberiaRent",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "cors": "*",
+    "express": "*"
+  },
+  "devDependencies": {
+    "@types/cors": "*",
+    "@types/express": "*",
+    "tsx": "*",
+    "typescript": "*"
+  }
+}

@@ -1,0 +1,13 @@
+# Игнорируем зависимости бэкенда и фронтенда
+node_modules/
+rent-frontend/node_modules/
+
+# Игнорируем сборки
+dist/
+rent-frontend/dist/
+rent-frontend/dist-ssr/
+
+# Игнорируем логи и системные файлы
+npm-debug.log*
+.DS_Store
+.env
