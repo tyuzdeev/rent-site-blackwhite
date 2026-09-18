@@ -10,4 +10,11 @@ export interface Property {
   rating: number;
   isPopular?: boolean;
   description?: string;
+  rules: {
+    deposit: string;
+    pets: boolean;
+    children: boolean;
+    parties: boolean;
+    smoking: boolean;
+  };
 }

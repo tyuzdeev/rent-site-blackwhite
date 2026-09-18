@@ -78,6 +78,35 @@ export const PropertyModal: React.FC<Props> = ({ property, onClose }) => {
             </p>
           </div>
 
+          {/* НОВЫЙ БЛОК: Условия заезда и правила */}
+          <div className="mb-8 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Условия размещения и залог</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+              <div className="flex items-center justify-between bg-white p-3 rounded-xl border border-gray-200">
+                <span className="text-gray-500">Страховой залог:</span>
+                <span className="font-bold text-gray-900">{property.rules.deposit} (при заезде)</span>
+              </div>
+              <div className="flex items-center justify-between bg-white p-3 rounded-xl border border-gray-200">
+                <span className="text-gray-500">С детьми:</span>
+                <span className={`font-semibold ${property.rules.children ? 'text-green-600' : 'text-red-600'}`}>
+                  {property.rules.children ? '✓ Можно с детьми' : '✕ Без детей'}
+                </span>
+              </div>
+              <div className="flex items-center justify-between bg-white p-3 rounded-xl border border-gray-200">
+                <span className="text-gray-500">С животными:</span>
+                <span className={`font-semibold ${property.rules.pets ? 'text-green-600' : 'text-red-600'}`}>
+                  {property.rules.pets ? '✓ Можно с питомцами' : '✕ Без животных'}
+                </span>
+              </div>
+              <div className="flex items-center justify-between bg-white p-3 rounded-xl border border-gray-200">
+                <span className="text-gray-500">Вечеринки:</span>
+                <span className={`font-semibold ${property.rules.parties ? 'text-green-600' : 'text-gray-700'}`}>
+                  {property.rules.parties ? '✓ Разрешены' : '✕ Запрещены'}
+                </span>
+              </div>
+            </div>
+          </div>
+
           <div className="mb-8">
             <h3 className="text-lg font-bold text-gray-900 mb-3">Включенные удобства</h3>
             <div className="flex flex-wrap gap-2">

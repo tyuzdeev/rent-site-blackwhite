@@ -10,6 +10,13 @@ export interface Property {
   rating: number;
   isPopular?: boolean;
   description?: string;
+  rules: {
+    deposit: string;
+    pets: boolean;
+    children: boolean;
+    parties: boolean;
+    smoking: boolean;
+  };
 }
 
 export const properties: Property[] = [
@@ -24,7 +31,8 @@ export const properties: Property[] = [
     stats: { guests: 2, bedrooms: 1, area: 45 },
     rating: 4.9,
     isPopular: true,
-    description: 'Стильный лофт в самом центре города. Дизайнерский ремонт, панорамные окна с видом на Красный проспект. Идеально подойдет для романтических выходных или деловой поездки.'
+    description: 'Стильный лофт в самом центре города. Дизайнерский ремонт, панорамные окна с видом на Красный проспект. Идеально подойдет для романтических выходных или деловой поездки.',
+    rules: { deposit: '3 000 ₽', pets: false, children: true, parties: false, smoking: false }
   },
   {
     id: '2',
@@ -36,7 +44,8 @@ export const properties: Property[] = [
     amenities: ['Баня', 'Мангал', 'Парковка', 'Лес', 'Караоке', 'Настольный теннис'],
     stats: { guests: 8, bedrooms: 4, area: 180 },
     rating: 5.0,
-    description: 'Большой деревянный коттедж прямо на границе с сосновым бором. На территории есть жаркая русская баня на дровах, просторная беседка с мангальной зоной.'
+    description: 'Большой деревянный коттедж прямо на границе с сосновым бором. На территории есть жаркая русская баня на дровах, просторная беседка с мангальной зоной.',
+    rules: { deposit: '10 000 ₽', pets: true, children: true, parties: true, smoking: false }
   },
   {
     id: '3',
@@ -48,7 +57,8 @@ export const properties: Property[] = [
     amenities: ['Купель', 'Камин', 'Терасса', 'Гриль', 'Wi-Fi'],
     stats: { guests: 6, bedrooms: 3, area: 120 },
     rating: 4.8,
-    description: 'Инстаграмный треугольный дом (A-Frame) с панорамным фасадом. Главная фишка — горячая купель фурако на открытой террасе, которую можно принимать даже зимой!'
+    description: 'Инстаграмный треугольный дом (A-Frame) с панорамным фасадом. Главная фишка — горячая купель фурако на открытой террасе, которую можно принимать даже зимой!',
+    rules: { deposit: '5 000 ₽', pets: true, children: true, parties: false, smoking: false }
   },
   {
     id: '4',
@@ -60,7 +70,8 @@ export const properties: Property[] = [
     amenities: ['Wi-Fi', 'Телевизор', 'Кухня', 'Балкон'],
     stats: { guests: 2, bedrooms: 1, area: 35 },
     rating: 4.7,
-    description: 'Светлая студия на 20 этаже в новом ЖК Европейский Берег. Потрясающий вид на реку и Бугринский мост. Рядом красивая набережная для прогулок.'
+    description: 'Светлая студия на 20 этаже в новом ЖК Европейский Берег. Потрясающий вид на реку и Бугринский мост. Рядом красивая набережная для прогулок.',
+    rules: { deposit: '2 000 ₽', pets: false, children: false, parties: false, smoking: false }
   },
   {
     id: '5',
@@ -73,7 +84,8 @@ export const properties: Property[] = [
     stats: { guests: 12, bedrooms: 5, area: 300 },
     rating: 4.9,
     isPopular: true,
-    description: 'Шикарная резиденция для премиального отдыха. Подогреваемый бассейн внутри дома, финская сауна, огромная зона для барбекю и ухоженный газон.'
+    description: 'Шикарная резиденция для премиального отдыха. Подогреваемый бассейн внутри дома, финская сауна, огромная зона для барбекю и ухоженный газон.',
+    rules: { deposit: '15 000 ₽', pets: false, children: true, parties: true, smoking: false }
   },
   {
     id: '6',
@@ -85,6 +97,7 @@ export const properties: Property[] = [
     amenities: ['Мангал', 'Лес', 'Печь-камин', 'Проектор'],
     stats: { guests: 4, bedrooms: 2, area: 80 },
     rating: 4.9,
-    description: 'Уединенный эко-домик в стиле сканди. Вокруг только сосны и тишина. Отличный вариант для цифрового детокса и отдыха от городской суеты.'
+    description: 'Уединенный эко-домик в стиле сканди. Вокруг только сосны и тишина. Отличный вариант для цифрового детокса и отдыха от городской суеты.',
+    rules: { deposit: '5 000 ₽', pets: true, children: true, parties: false, smoking: false }
   }
 ];
